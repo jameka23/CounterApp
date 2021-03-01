@@ -8,7 +8,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var count: Int = 0;
+    var label = UILabel?;
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,6 +23,8 @@ class ViewController: UIViewController {
         label.text = "0"
         view.addSubview(label)
         
+        
+        self.label = label;
         let button = UIButton()
         button.frame = CGRect(x: 150, y: 250, width: 60, height: 60)
         button.setTitle("Click", for: .normal)
