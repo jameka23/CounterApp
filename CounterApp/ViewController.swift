@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var count: Int = 0;
-    var label: UILabel?;
+    @IBOutlet var label: UILabel?;
     
     
     override func viewDidLoad() {
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         
 
     }
-    @objc func incrementCount(){
+    @IBAction func incrementCount(){
         self.count += 1
         self.label?.text = "\(self.count)"
     }
