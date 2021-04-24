@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var count: Int = 0;
-    var label = UILabel?;
+    var label: UILabel?;
     
     
     override func viewDidLoad() {
@@ -30,8 +30,14 @@ class ViewController: UIViewController {
         button.setTitle("Click", for: .normal)
         button.setTitleColor(UIColor.blue, for: .normal)
         view.addSubview(button)
-    }
+        button.addTarget(self, action: #selector(ViewController.incrementCount), for: UIControl.Event.touchUpInside)
+        
 
+    }
+    @objc func incrementCount(){
+        self.count += 1
+        self.label?.text = "\(self.count)"
+    }
 
 }
 
